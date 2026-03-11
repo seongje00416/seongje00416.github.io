@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Forest | Backend Developer Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec37",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#050805",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary/30">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation -->
+<header class="flex items-center justify-between border-b border-white/10 px-6 py-4 md:px-20 lg:px-40 backdrop-blur-md sticky top-0 z-50 bg-[#050805]/90">
+<div class="flex items-center gap-3">
+<div class="text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">forest</span>
+</div>
+<h2 class="text-slate-100 text-lg font-bold leading-tight tracking-tight">Digital Forest</h2>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex items-center gap-8">
+<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#about">About</a>
+<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#projects">Projects</a>
+<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#stack">Tech Stack</a>
+<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#contact">Contact</a>
+</nav>
+<div class="h-6 w-[1px] bg-white/10"></div>
+<a class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/5 hover:bg-white/10 text-slate-100 transition-all border border-white/10" href="https://github.com" target="_blank">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+</div>
+<!-- Mobile Menu Icon (Visual Only) -->
+<button class="md:hidden text-slate-100">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex-1 px-6 md:px-20 lg:px-40 py-12">
+<div class="max-w-[1200px] mx-auto">
+<!-- Hero Section -->
+<section class="flex flex-col gap-10 lg:flex-row lg:items-center py-10 lg:py-20 border-b border-white/5">
+<div class="flex flex-col gap-8 flex-1">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-fit">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Available for new opportunities</span>
+</div>
+<div class="flex flex-col gap-4">
+<h1 class="text-slate-100 text-4xl md:text-6xl font-black leading-[1.1] tracking-tight">
+                                    Building Robust Backends in the Heart of the <span class="text-primary">Digital Forest</span>
+</h1>
+<p class="text-slate-400 text-lg md:text-xl max-w-2xl leading-relaxed">
+                                    Passionate junior backend developer specializing in scalable system architecture, high-performance APIs, and server-side efficiency.
+                                </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="flex items-center justify-center rounded-xl h-12 px-8 bg-primary text-background-dark text-base font-bold transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
+                                    View My Work
+                                </button>
+<button class="flex items-center justify-center rounded-xl h-12 px-8 bg-white/5 text-slate-100 border border-white/10 text-base font-bold hover:bg-white/10 transition-all">
+                                    Download CV
+                                </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary/50 to-emerald-900/50 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative w-full lg:w-[420px] aspect-square rounded-2xl overflow-hidden border border-white/10 bg-slate-800">
+<img alt="Profile Portrait" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A professional portrait of a developer in a dark studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgS6pCPx3hSriY_N9ftcf5xhzYq_HBO0naEGmpQiVt_sElB_yz2kDeh_XjqX6G1lAUaLJw9zuVRroslqgxj3EjKJhYthJ1sshUFw-BBt4N30gyHlrWbwQ79Ha4N-4Ap5pUF5iWlaUlW_zkmVoFm6crfGF8d_WrJbUb-OZ8WeHQrjejAbDmq3aX_NeHWEKhgQG0r_POj2QMSwvQZ5L-6f_6Cdda5LBUbM9ilSujZcmT4sfro_ZiXbih2Vt4A-O9mPhqyIRVCH7HrIg"/>
+</div>
+</div>
+</section>
+<!-- Quick Bio & Content Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 py-20 border-b border-white/5" id="about">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<h2 class="text-primary text-sm font-bold uppercase tracking-widest flex items-center gap-2">
+<span class="h-px w-8 bg-primary"></span> Quick Bio
+                            </h2>
+<h3 class="text-slate-100 text-3xl font-bold">Rooted in logic, branching into complexity.</h3>
+<div class="flex flex-col gap-4 text-slate-400 text-lg leading-relaxed">
+<p>
+                                    I am a junior backend developer dedicated to crafting efficient, reliable, and secure server-side solutions. My journey is fueled by a fascination with complex system architectures and a commitment to optimizing performance in the digital wilderness.
+                                </p>
+<p>
+                                    Whether it's optimizing database queries for milliseconds of performance or architecting microservices that scale horizontally, I enjoy the challenge of solving problems that happen behind the scenes.
+                                </p>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-8">
+<div class="p-8 rounded-2xl bg-white/5 border border-white/10 relative overflow-hidden group bg-[#0a0c0a]">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl">database</span>
+</div>
+<h4 class="text-slate-100 text-xl font-bold mb-4">Core Philosophy</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-slate-300">Clean code is not just a preference, it's a requirement.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-slate-300">Scalability starts at the architectural level.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-slate-300">Security should never be an afterthought.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Tech Stack Section -->
+<section class="py-20 border-b border-white/5" id="stack">
+<div class="flex flex-col gap-12">
+<div class="text-center flex flex-col items-center gap-4">
+<h2 class="text-primary text-sm font-bold uppercase tracking-widest">My Arsenal</h2>
+<h3 class="text-slate-100 text-4xl font-black">The Core Tech Stack</h3>
+<p class="text-slate-400 max-w-xl">Leveraging modern tools and frameworks to build high-performance backend systems.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+<!-- Java -->
+<div class="group flex flex-col items-center justify-center p-8 rounded-2xl border border-white/10 hover:border-primary/40 hover:bg-primary/5 transition-all bg-[#0a0c0a]">
+<span class="material-symbols-outlined text-4xl text-slate-400 group-hover:text-primary transition-colors mb-4">coffee</span>
+<span class="text-slate-100 font-bold">Java</span>
+<span class="text-slate-500 text-xs mt-1">Primary Language</span>
+</div>
+<!-- Spring Boot -->
+<div class="group flex flex-col items-center justify-center p-8 rounded-2xl border border-white/10 hover:border-primary/40 hover:bg-primary/5 transition-all bg-[#0a0c0a]">
+<span class="material-symbols-outlined text-4xl text-slate-400 group-hover:text-primary transition-colors mb-4">deployed_code</span>
+<span class="text-slate-100 font-bold">Spring Boot</span>
+<span class="text-slate-500 text-xs mt-1">Framework</span>
+</div>
+<!-- MySQL -->
+<div class="group flex flex-col items-center justify-center p-8 rounded-2xl border border-white/10 hover:border-primary/40 hover:bg-primary/5 transition-all bg-[#0a0c0a]">
+<span class="material-symbols-outlined text-4xl text-slate-400 group-hover:text-primary transition-colors mb-4">database</span>
+<span class="text-slate-100 font-bold">MySQL</span>
+<span class="text-slate-500 text-xs mt-1">Database</span>
+</div>
+<!-- AWS -->
+<div class="group flex flex-col items-center justify-center p-8 rounded-2xl border border-white/10 hover:border-primary/40 hover:bg-primary/5 transition-all bg-[#0a0c0a]">
+<span class="material-symbols-outlined text-4xl text-slate-400 group-hover:text-primary transition-colors mb-4">cloud</span>
+<span class="text-slate-100 font-bold">AWS</span>
+<span class="text-slate-500 text-xs mt-1">Infrastructure</span>
+</div>
+<!-- Git -->
+<div class="group flex flex-col items-center justify-center p-8 rounded-2xl border border-white/10 hover:border-primary/40 hover:bg-primary/5 transition-all bg-[#0a0c0a]">
+<span class="material-symbols-outlined text-4xl text-slate-400 group-hover:text-primary transition-colors mb-4">account_tree</span>
+<span class="text-slate-100 font-bold">Git</span>
+<span class="text-slate-500 text-xs mt-1">Version Control</span>
+</div>
+</div>
+</div>
+</section>
+<!-- GitHub CTA -->
+<section class="py-20">
+<div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-primary/10 via-[#0a0c0a] to-[#050805] border border-white/5 p-10 md:p-20 text-center">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGjciQGoiCtJhVnwxZjG2GmpPLLJ5DOy0mioeykwovw2ipYJsjWWCJFfJQdrle4mseY8TJ_G_IE33-3pQ7Mdw9EICk3CW-0MDiNz8sLitLYupb3JDx15hEtj4efJFqsJ57kOBSNP3vinAix1NO-P3Pq7rg-EOrk60EHtKmtqKJmIVfIoy3YhOAPdxyjKbCWxDc-hpgUjdP-NsQwjZOWaQ9xmIXP_0RtOj5ISF6skRs9WE83GdqVgPhd6TKtMzdP1hXAyRmT8HXMr4');"></div>
+<div class="relative z-10 flex flex-col items-center gap-8">
+<div class="w-20 h-20 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-4xl text-primary">terminal</span>
+</div>
+<h3 class="text-slate-100 text-3xl md:text-5xl font-black">Explore My Codebase</h3>
+<p class="text-slate-400 text-lg max-w-2xl">
+                                    Witness the evolution of my projects, from experimental scripts to full-blown enterprise-grade microservices. Open source, always curious.
+                                </p>
+<a class="inline-flex items-center justify-center gap-3 rounded-xl h-14 px-10 bg-primary text-background-dark text-lg font-bold transition-all hover:shadow-[0_0_30px_-5px_rgba(19,236,55,0.4)] hover:scale-105 active:scale-95" href="https://github.com" target="_blank">
+<span class="material-symbols-outlined">code</span>
+                                    Explore my GitHub
+                                </a>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="border-t border-white/5 py-12 px-6 md:px-20 lg:px-40 bg-black/40">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">forest</span>
+<span class="text-slate-100 font-bold">Digital Forest</span>
+</div>
+<div class="flex gap-8 text-slate-500 text-sm">
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="hover:text-primary transition-colors" href="#">Email</a>
+</div>
+<p class="text-slate-600 text-sm">
+                        © 2024 Digital Forest Backend. All rights reserved.
+                    </p>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
