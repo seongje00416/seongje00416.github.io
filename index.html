@@ -1,213 +1,443 @@
 <!DOCTYPE html>
 
 <html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Digital Forest | Backend Developer Portfolio</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">        tailwind.config = {
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>DevPortfolio | Backend Architect</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
                         "primary": "#13ec37",
                         "background-light": "#f6f8f6",
-                        "background-dark": "#050805",
+                        "background-dark": "#0a0c10", // Deep charcoal/near black
+                        "accent-cloud": "#2d2a4a", // Muted purple/blue for clouds
                     },
                     fontFamily: {
-                        "display": ["Inter"]
+                        "display": ["Inter", "sans-serif"]
                     },
                     borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
                 },
             },
-        }    </script>
+        }
+    </script>
+    <style>body {
+        font-family: "Inter", sans-serif
+    }
+    .cloud-gradient {
+        background: radial-gradient(circle at 50% -20%, #1e1b33 0%, #0a0c10 70%)
+    }
+    .cloud-overlay {
+        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC01LZhBx7m_eNxdOK_BevyK5CE3Jx6n_i-I_u5CkiSX2mYjs_UNofSX7hn4VEmuOkn9Jzg6ANZqkWGdFRaCT14SJg9UGP0_QrPHS9ucyqAD68EKA3xprcidN49DWD_WCpDJlvT637IMUhRJMIQPnyXaj5dsTwwkvYC6JClsoQiZ2iS7BQd28Gsn8MwbmjUSCxDWnbb7tAHCaqYFnEoy4TibZTf0W_BoLEbWf7gsuVmquWEOrCxzZHu7-3YBpmMrlqCTVc9U1CKRbo);
+        opacity: 0.03
+    }</style>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary/30">
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-<div class="layout-container flex h-full grow flex-col">
-<!-- Navigation -->
-<header class="flex items-center justify-between border-b border-white/10 px-6 py-4 md:px-20 lg:px-40 backdrop-blur-md sticky top-0 z-50 bg-[#050805]/90">
-<div class="flex items-center gap-3">
-<div class="text-primary flex items-center justify-center">
-<span class="material-symbols-outlined text-3xl">forest</span>
-</div>
-<h2 class="text-slate-100 text-lg font-bold leading-tight tracking-tight">Digital Forest</h2>
-</div>
-<div class="hidden md:flex items-center gap-8">
-<nav class="flex items-center gap-8">
-<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#about">About</a>
-<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#projects">Projects</a>
-<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#stack">Tech Stack</a>
-<a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#contact">Contact</a>
-</nav>
-<div class="h-6 w-[1px] bg-white/10"></div>
-<a class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/5 hover:bg-white/10 text-slate-100 transition-all border border-white/10" href="https://github.com" target="_blank">
-<span class="material-symbols-outlined text-[20px]">code</span>
-</a>
-</div>
-<!-- Mobile Menu Icon (Visual Only) -->
-<button class="md:hidden text-slate-100">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</header>
-<main class="flex-1 px-6 md:px-20 lg:px-40 py-12">
-<div class="max-w-[1200px] mx-auto">
-<!-- Hero Section -->
-<section class="flex flex-col gap-10 lg:flex-row lg:items-center py-10 lg:py-20 border-b border-white/5">
-<div class="flex flex-col gap-8 flex-1">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-fit">
-<span class="relative flex h-2 w-2">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-</span>
-<span class="text-primary text-xs font-bold uppercase tracking-wider">Available for new opportunities</span>
-</div>
-<div class="flex flex-col gap-4">
-<h1 class="text-slate-100 text-4xl md:text-6xl font-black leading-[1.1] tracking-tight">
-                                    Building Robust Backends in the Heart of the <span class="text-primary">Digital Forest</span>
-</h1>
-<p class="text-slate-400 text-lg md:text-xl max-w-2xl leading-relaxed">
-                                    Passionate junior backend developer specializing in scalable system architecture, high-performance APIs, and server-side efficiency.
-                                </p>
-</div>
-<div class="flex flex-wrap gap-4">
-<button class="flex items-center justify-center rounded-xl h-12 px-8 bg-primary text-background-dark text-base font-bold transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
-                                    View My Work
-                                </button>
-<button class="flex items-center justify-center rounded-xl h-12 px-8 bg-white/5 text-slate-100 border border-white/10 text-base font-bold hover:bg-white/10 transition-all">
-                                    Download CV
-                                </button>
-</div>
-</div>
-<div class="relative group">
-<div class="absolute -inset-1 bg-gradient-to-r from-primary/50 to-emerald-900/50 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-<div class="relative w-full lg:w-[420px] aspect-square rounded-2xl overflow-hidden border border-white/10 bg-slate-800">
-<img alt="Profile Portrait" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A professional portrait of a developer in a dark studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgS6pCPx3hSriY_N9ftcf5xhzYq_HBO0naEGmpQiVt_sElB_yz2kDeh_XjqX6G1lAUaLJw9zuVRroslqgxj3EjKJhYthJ1sshUFw-BBt4N30gyHlrWbwQ79Ha4N-4Ap5pUF5iWlaUlW_zkmVoFm6crfGF8d_WrJbUb-OZ8WeHQrjejAbDmq3aX_NeHWEKhgQG0r_POj2QMSwvQZ5L-6f_6Cdda5LBUbM9ilSujZcmT4sfro_ZiXbih2Vt4A-O9mPhqyIRVCH7HrIg"/>
-</div>
-</div>
-</section>
-<!-- Quick Bio & Content Grid -->
-<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 py-20 border-b border-white/5" id="about">
-<div class="lg:col-span-7 flex flex-col gap-6">
-<h2 class="text-primary text-sm font-bold uppercase tracking-widest flex items-center gap-2">
-<span class="h-px w-8 bg-primary"></span> Quick Bio
-                            </h2>
-<h3 class="text-slate-100 text-3xl font-bold">Rooted in logic, branching into complexity.</h3>
-<div class="flex flex-col gap-4 text-slate-400 text-lg leading-relaxed">
-<p>
-                                    I am a junior backend developer dedicated to crafting efficient, reliable, and secure server-side solutions. My journey is fueled by a fascination with complex system architectures and a commitment to optimizing performance in the digital wilderness.
-                                </p>
-<p>
-                                    Whether it's optimizing database queries for milliseconds of performance or architecting microservices that scale horizontally, I enjoy the challenge of solving problems that happen behind the scenes.
-                                </p>
-</div>
-</div>
-<div class="lg:col-span-5 flex flex-col gap-8">
-<div class="p-8 rounded-2xl bg-white/5 border border-white/10 relative overflow-hidden group bg-[#0a0c0a]">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-<span class="material-symbols-outlined text-8xl">database</span>
-</div>
-<h4 class="text-slate-100 text-xl font-bold mb-4">Core Philosophy</h4>
-<ul class="space-y-4">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-<span class="text-slate-300">Clean code is not just a preference, it's a requirement.</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-<span class="text-slate-300">Scalability starts at the architectural level.</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-<span class="text-slate-300">Security should never be an afterthought.</span>
-</li>
-</ul>
-</div>
-</div>
-</section>
-<!-- Tech Stack Section -->
-<section class="py-20 border-b border-white/5" id="stack">
-<div class="flex flex-col gap-12">
-<div class="text-center flex flex-col items-center gap-4">
-<h2 class="text-primary text-sm font-bold uppercase tracking-widest">My Arsenal</h2>
-<h3 class="text-slate-100 text-4xl font-black">The Core Tech Stack</h3>
-<p class="text-slate-400 max-w-xl">Leveraging modern tools and frameworks to build high-performance backend systems.</p>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-<!-- Java -->
-<div class="group flex flex-col items-center justify-center p-8 rounded-2xl border border-white/10 hover:border-primary/40 hover:bg-primary/5 transition-all bg-[#0a0c0a]">
-<span class="material-symbols-outlined text-4xl text-slate-400 group-hover:text-primary transition-colors mb-4">coffee</span>
-<span class="text-slate-100 font-bold">Java</span>
-<span class="text-slate-500 text-xs mt-1">Primary Language</span>
-</div>
-<!-- Spring Boot -->
-<div class="group flex flex-col items-center justify-center p-8 rounded-2xl border border-white/10 hover:border-primary/40 hover:bg-primary/5 transition-all bg-[#0a0c0a]">
-<span class="material-symbols-outlined text-4xl text-slate-400 group-hover:text-primary transition-colors mb-4">deployed_code</span>
-<span class="text-slate-100 font-bold">Spring Boot</span>
-<span class="text-slate-500 text-xs mt-1">Framework</span>
-</div>
-<!-- MySQL -->
-<div class="group flex flex-col items-center justify-center p-8 rounded-2xl border border-white/10 hover:border-primary/40 hover:bg-primary/5 transition-all bg-[#0a0c0a]">
-<span class="material-symbols-outlined text-4xl text-slate-400 group-hover:text-primary transition-colors mb-4">database</span>
-<span class="text-slate-100 font-bold">MySQL</span>
-<span class="text-slate-500 text-xs mt-1">Database</span>
-</div>
-<!-- AWS -->
-<div class="group flex flex-col items-center justify-center p-8 rounded-2xl border border-white/10 hover:border-primary/40 hover:bg-primary/5 transition-all bg-[#0a0c0a]">
-<span class="material-symbols-outlined text-4xl text-slate-400 group-hover:text-primary transition-colors mb-4">cloud</span>
-<span class="text-slate-100 font-bold">AWS</span>
-<span class="text-slate-500 text-xs mt-1">Infrastructure</span>
-</div>
-<!-- Git -->
-<div class="group flex flex-col items-center justify-center p-8 rounded-2xl border border-white/10 hover:border-primary/40 hover:bg-primary/5 transition-all bg-[#0a0c0a]">
-<span class="material-symbols-outlined text-4xl text-slate-400 group-hover:text-primary transition-colors mb-4">account_tree</span>
-<span class="text-slate-100 font-bold">Git</span>
-<span class="text-slate-500 text-xs mt-1">Version Control</span>
-</div>
-</div>
-</div>
-</section>
-<!-- GitHub CTA -->
-<section class="py-20">
-<div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-primary/10 via-[#0a0c0a] to-[#050805] border border-white/5 p-10 md:p-20 text-center">
-<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGjciQGoiCtJhVnwxZjG2GmpPLLJ5DOy0mioeykwovw2ipYJsjWWCJFfJQdrle4mseY8TJ_G_IE33-3pQ7Mdw9EICk3CW-0MDiNz8sLitLYupb3JDx15hEtj4efJFqsJ57kOBSNP3vinAix1NO-P3Pq7rg-EOrk60EHtKmtqKJmIVfIoy3YhOAPdxyjKbCWxDc-hpgUjdP-NsQwjZOWaQ9xmIXP_0RtOj5ISF6skRs9WE83GdqVgPhd6TKtMzdP1hXAyRmT8HXMr4');"></div>
-<div class="relative z-10 flex flex-col items-center gap-8">
-<div class="w-20 h-20 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
-<span class="material-symbols-outlined text-4xl text-primary">terminal</span>
-</div>
-<h3 class="text-slate-100 text-3xl md:text-5xl font-black">Explore My Codebase</h3>
-<p class="text-slate-400 text-lg max-w-2xl">
-                                    Witness the evolution of my projects, from experimental scripts to full-blown enterprise-grade microservices. Open source, always curious.
-                                </p>
-<a class="inline-flex items-center justify-center gap-3 rounded-xl h-14 px-10 bg-primary text-background-dark text-lg font-bold transition-all hover:shadow-[0_0_30px_-5px_rgba(19,236,55,0.4)] hover:scale-105 active:scale-95" href="https://github.com" target="_blank">
-<span class="material-symbols-outlined">code</span>
-                                    Explore my GitHub
-                                </a>
-</div>
-</div>
-</section>
-</div>
-</main>
-<!-- Footer -->
-<footer class="border-t border-white/5 py-12 px-6 md:px-20 lg:px-40 bg-black/40">
-<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">forest</span>
-<span class="text-slate-100 font-bold">Digital Forest</span>
-</div>
-<div class="flex gap-8 text-slate-500 text-sm">
-<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
-<a class="hover:text-primary transition-colors" href="#">Twitter</a>
-<a class="hover:text-primary transition-colors" href="#">Email</a>
-</div>
-<p class="text-slate-600 text-sm">
-                        © 2024 Digital Forest Backend. All rights reserved.
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<div class="relative min-h-screen flex flex-col overflow-x-hidden">
+    <!-- Background Textures -->
+    <div class="fixed inset-0 z-0 pointer-events-none cloud-gradient"></div>
+    <div class="fixed inset-0 z-0 pointer-events-none cloud-overlay"></div>
+    <!-- Navbar -->
+    <header class="relative z-10 flex items-center justify-between border-b border-slate-800/50 px-6 py-4 lg:px-20 bg-background-dark/80 backdrop-blur-md">
+        <div class="flex items-center gap-3">
+            <div class="p-2 bg-primary/10 rounded-lg">
+                <span class="material-symbols-outlined text-primary text-2xl">filter_drama</span>
+            </div>
+            <h2 class="text-xl font-black tracking-tight text-slate-100"> 임성제 </h2>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="#"> 홈 </a>
+            <a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="#"> 기술 스택 </a>
+            <a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors" href="#"> 프로젝트 </a>
+            <div class="relative group">
+                <a class="text-sm font-medium text-slate-400 hover:text-primary transition-colors flex items-center gap-1 cursor-pointer" href="#">
+                    블로그
+                    <span class="material-symbols-outlined text-sm" style="font-size:14px;">expand_more</span>
+                </a>
+                <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-36 bg-background-dark/95 border border-slate-700 rounded-lg shadow-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <a class="block px-4 py-2.5 text-sm text-slate-400 hover:text-primary hover:bg-slate-800/50 transition-colors" href="#" target="_blank">Notion</a>
+                    <a class="block px-4 py-2.5 text-sm text-slate-400 hover:text-primary hover:bg-slate-800/50 transition-colors" href="#" target="_blank">Tistory</a>
+                </div>
+            </div>
+        </nav>
+        <div class="flex items-center gap-4">
+            <button class="flex items-center gap-2 bg-primary hover:bg-primary/90 text-background-dark px-5 py-2 rounded-lg text-sm font-bold transition-all transform hover:scale-105">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/>
+                </svg>
+                Github
+            </button>
+        </div>
+    </header>
+    <main class="relative z-10 flex-1 flex flex-col items-center">
+        <!-- Hero Section -->
+        <section class="w-full max-w-6xl px-6 pt-16 pb-24 md:pt-32 md:pb-40 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-cloud/30 border border-accent-cloud text-slate-300 text-xs font-semibold mb-8">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
+                백엔드 개발자
+            </div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-cloud/30 border border-accent-cloud text-slate-300 text-xs font-semibold mb-8">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
+                서버 개발자
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black text-white leading-tight tracking-tight mb-6">
+                <span class="text-primary"> 나무 </span> 같은 개발자를 <br class="hidden md:block"/> 꿈꾸는 임성제입니다.
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                누군가에게 도움이 될 수 있는 사람이 되기 위해 개발자가 되었습니다. <br> 사용자 뿐만 아니라 함께 개발하는 팀원들의 경험까지 고민하는 개발자입니다.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="flex items-center gap-2 bg-primary text-background-dark px-8 py-4 rounded-xl font-bold text-lg hover:shadow-[0_0_20px_rgba(19,236,55,0.3)] transition-all">
+                    <span class="material-symbols-outlined">terminal</span>
+                    Explore Codebase
+                </button>
+                <button class="flex items-center gap-2 bg-slate-800/50 text-white border border-slate-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-800 transition-all">
+                    Get in Touch
+                </button>
+            </div>
+            <!-- Decorative Abstract "Cloud" -->
+            <div class="mt-20 relative w-full h-32 overflow-hidden rounded-2xl">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-accent-cloud/20 to-transparent" data-alt="Abstract dark purple cloud gradient pattern"></div>
+                <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 w-3/4 h-24 blur-3xl bg-primary/5 rounded-full"></div>
+            </div>
+        </section>
+        <!-- Tech Stack Section -->
+        <section class="w-full max-w-6xl px-6 py-20 border-t border-slate-800/50">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-2"> 기술 스택 </h2>
+                    <p class="text-slate-400"> 지금까지 사용해본 기술 스택입니다. </p>
+                </div>
+                <div class="text-primary font-mono text-sm tracking-widest uppercase"> 더보기</div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <!-- Java -->
+                <div class="group p-6 bg-slate-900/40 border border-slate-800 rounded-2xl hover:border-primary/50 transition-all hover:bg-slate-900/60">
+                    <div class="w-12 h-12 flex items-center justify-center bg-accent-cloud/40 rounded-xl mb-4 text-primary group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">code</span>
+                    </div>
+                    <h3 class="text-white font-bold text-lg">Java</h3>
+                    <p class="text-slate-500 text-sm">Primary Language</p>
+                </div>
+                <!-- Spring Boot -->
+                <div class="group p-6 bg-slate-900/40 border border-slate-800 rounded-2xl hover:border-primary/50 transition-all hover:bg-slate-900/60">
+                    <div class="w-12 h-12 flex items-center justify-center bg-accent-cloud/40 rounded-xl mb-4 text-primary group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">energy_savings_leaf</span>
+                    </div>
+                    <h3 class="text-white font-bold text-lg">Spring Boot</h3>
+                    <p class="text-slate-500 text-sm">Framework</p>
+                </div>
+                <!-- MySQL -->
+                <div class="group p-6 bg-slate-900/40 border border-slate-800 rounded-2xl hover:border-primary/50 transition-all hover:bg-slate-900/60">
+                    <div class="w-12 h-12 flex items-center justify-center bg-accent-cloud/40 rounded-xl mb-4 text-primary group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">database</span>
+                    </div>
+                    <h3 class="text-white font-bold text-lg">MySQL</h3>
+                    <p class="text-slate-500 text-sm">관계형 DB</p>
+                </div>
+                <!-- AWS -->
+                <div class="group p-6 bg-slate-900/40 border border-slate-800 rounded-2xl hover:border-primary/50 transition-all hover:bg-slate-900/60">
+                    <div class="w-12 h-12 flex items-center justify-center bg-accent-cloud/40 rounded-xl mb-4 text-primary group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">cloud</span>
+                    </div>
+                    <h3 class="text-white font-bold text-lg">AWS</h3>
+                    <p class="text-slate-500 text-sm">Cloud 인프라</p>
+                </div>
+                <!-- Git -->
+                <div class="group p-6 bg-slate-900/40 border border-slate-800 rounded-2xl hover:border-primary/50 transition-all hover:bg-slate-900/60">
+                    <div class="w-12 h-12 flex items-center justify-center bg-accent-cloud/40 rounded-xl mb-4 text-primary group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">hub</span>
+                    </div>
+                    <h3 class="text-white font-bold text-lg">Git</h3>
+                    <p class="text-slate-500 text-sm">형상 관리</p>
+                </div>
+            </div>
+        </section>
+        </section>
+        <!-- Experience Section -->
+        <section class="w-full max-w-6xl px-6 py-20 border-t border-slate-800/50" id="experience">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-2"> 경험 </h2>
+                    <p class="text-slate-400"> 개발 및 인프라에 대한 경험을 위해 다양한 도전을 해왔습니다. </p>
+                </div>
+                <div class="text-primary font-mono text-sm tracking-widest uppercase"> 자세히 보기</div>
+            </div>
+            <!-- 네이버 클라우드 인턴 -->
+            <div class="bg-slate-900/40 border border-slate-800 rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full"></div>
+                <div class="relative z-10">
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1">
+                            <div class="mb-1">
+                                <h3 class="text-2xl font-bold text-white"> Customer Experience Management</h3>
+                                <p class="text-primary font-medium mb-1"> NAVER Cloud </p>
+                                <p class="text-slate-500 text-sm mb-6">Mar 2024 - Aug 2024</p>
+                            </div>
+                            <p class="text-slate-400 text-lg mb-6 leading-relaxed">
+                                NCP 및 클라우드 서비스에 대한 기술적 문의에 대응하고 사용자들의 트러블 슈팅을 지원했습니다. 클라우드 서비스 중 NCP에 대한 접근성을 늘리기 위해 쉬운 서비스 사용을 위한 가이드를 작성하고 현재 가이드의 개선안을 작성했습니다.
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start gap-3 text-slate-400">
+                                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                    <span> 사용자들의 기술적 문의에 대한 대응 및 트러블 슈팅 지원 </span>
+                                </li>
+                                <li class="flex items-start gap-3 text-slate-400">
+                                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                    <span> 클라우드 인프라 입문자들을 위한 가이드 제작 기획 </span>
+                                </li>
+                                <li class="flex items-start gap-3 text-slate-400">
+                                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                    <span> 기술 문의 분류 및 분석을 통한 가이드 개선안 작성 </span>
+                                </li>
+                                <li class="flex items-start gap-3 text-slate-400">
+                                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                    <span> 신규 사용자 유입을 위한 서비스 접근성 개선안 작성 </span>
+                                </li>
+                            </ul>
+                            <button class="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">
+                                자세히 보기
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 w-full md:w-auto">
+                            <div class="p-6 bg-accent-cloud/20 rounded-2xl border border-slate-800">
+                                <div class="text-3xl font-black text-primary mb-1"> 6 </div>
+                                <div class="text-xs text-slate-500 uppercase tracking-wider font-bold">Month Exp</div>
+                            </div>
+                            <div class="p-6 bg-accent-cloud/20 rounded-2xl border border-slate-800">
+                                <div class="text-3xl font-black text-primary mb-1">5</div>
+                                <div class="text-xs text-slate-500 uppercase tracking-wider font-bold">Projects</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <!-- 스프레틱스 -->
+            <div class="bg-slate-900/40 border border-slate-800 rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full"></div>
+                <div class="relative z-10">
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1">
+                            <div class="mb-1">
+                                <h3 class="text-2xl font-bold text-white"> Back-End Developer </h3>
+                                <p class="text-primary font-medium mb-1"> (주)스프레틱스 </p>
+                                <p class="text-slate-500 text-sm mb-6">Mar 2020 - Nov 2020</p>
+                            </div>
+                            <p class="text-slate-400 text-lg mb-6 leading-relaxed">
+                                온라인 원격 코딩 강의를 위한 플랫폼 서버를 개발하고
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start gap-3 text-slate-400">
+                                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                    <span> PHP를 통한 API 서버 개발 </span>
+                                </li>
+                                <li class="flex items-start gap-3 text-slate-400">
+                                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                    <span> KG이니시스 결제 모듈을 사용한 결제 시스템 개발 </span>
+                                </li>
+                                <li class="flex items-start gap-3 text-slate-400">
+                                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                    <span> NCP에서 AWS로 서버 마이그레이션 작업 진행 </span>
+                                </li>
+                            </ul>
+                            <button class="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">
+                                자세히 보기
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 w-full md:w-auto">
+                            <div class="p-6 bg-accent-cloud/20 rounded-2xl border border-slate-800">
+                                <div class="text-3xl font-black text-primary mb-1"> 9 </div>
+                                <div class="text-xs text-slate-500 uppercase tracking-wider font-bold">Month Exp</div>
+                            </div>
+                            <div class="p-6 bg-accent-cloud/20 rounded-2xl border border-slate-800">
+                                <div class="text-3xl font-black text-primary mb-1">5</div>
+                                <div class="text-xs text-slate-500 uppercase tracking-wider font-bold">Projects</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Projects Section -->
+        <section class="w-full max-w-6xl px-6 py-20 border-t border-slate-800/50" id="projects">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-2"> 참여 프로젝트 </h2>
+                    <p class="text-slate-400"> 개발에 대한 경험을 쌓기 위해 교내 및 외부 활동에 참여했습니다. </p>
+                </div>
+                <div class="text-primary font-mono text-sm tracking-widest uppercase">더보기</div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Fooding -->
+                <div class="group bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all">
+                    <div class="h-48 bg-accent-cloud/30 relative overflow-hidden">
+                        <img src="public/fooding.png" alt="Fooding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                    </div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-white mb-1"> Fooding </h3>
+                        <p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">백엔드 개발</p>
+                        <p class="text-slate-400 text-xs mb-4 font-mono">Spring Boot, Redis, WebFlux</p>
+                        <p class="text-slate-500 text-sm mb-6">Designed and implemented a high-throughput API gateway for enterprise-scale traffic management.</p><button class="w-full py-3 bg-slate-800/50 text-white rounded-xl font-bold text-sm hover:bg-primary hover:text-background-dark transition-colors">View Details</button></div>
+                </div>
+                <!-- Pool -->
+                <div class="group bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all">
+                    <div class="h-48 bg-accent-cloud/30 relative overflow-hidden">
+                        <img src="public/fooding.png" alt="Fooding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                    </div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-white mb-1"> Pool </h3>
+                        <p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">서버 개발</p>
+                        <p class="text-slate-400 text-xs mb-4 font-mono">Spring Boot, FCM, gRPC, AWS</p>
+                        <p class="text-slate-500 text-sm mb-6">Designed and implemented a high-throughput API gateway for enterprise-scale traffic management.</p><button class="w-full py-3 bg-slate-800/50 text-white rounded-xl font-bold text-sm hover:bg-primary hover:text-background-dark transition-colors">View Details</button></div>
+                </div>
+                <!-- Now & Go -->
+                <div class="group bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all">
+                    <div class="h-48 bg-accent-cloud/30 relative overflow-hidden">
+                        <img src="public/fooding.png" alt="Fooding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                    </div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-white mb-1"> Now & Go </h3>
+                        <p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">서버 개발</p>
+                        <p class="text-slate-400 text-xs mb-4 font-mono">Spring Boot, MSA, Kubernetes, </p>
+                        <p class="text-slate-500 text-sm mb-6">Designed and implemented a high-throughput API gateway for enterprise-scale traffic management.</p><button class="w-full py-3 bg-slate-800/50 text-white rounded-xl font-bold text-sm hover:bg-primary hover:text-background-dark transition-colors">View Details</button></div>
+                </div>
+                <!-- Inflo -->
+                <div class="group bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all">
+                    <div class="h-48 bg-accent-cloud/30 relative overflow-hidden">
+                        <img src="public/fooding.png" alt="Fooding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                    </div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-white mb-1"> Inflo </h3>
+                        <p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">Backend Lead</p>
+                        <p class="text-slate-400 text-xs mb-4 font-mono">Spring Cloud, Redis, Docker</p>
+                        <p class="text-slate-500 text-sm mb-6">Designed and implemented a high-throughput API gateway for enterprise-scale traffic management.</p><button class="w-full py-3 bg-slate-800/50 text-white rounded-xl font-bold text-sm hover:bg-primary hover:text-background-dark transition-colors">View Details</button></div>
+                </div>
+                <!-- Live Streaming Replica -->
+                <div class="group bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all">
+                    <div class="h-48 bg-accent-cloud/30 relative overflow-hidden">
+                        <img src="public/fooding.png" alt="Fooding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                    </div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-white mb-1">Microservices Gateway</h3><p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">Backend Lead</p><p class="text-slate-400 text-xs mb-4 font-mono">Spring Cloud, Redis, Docker</p><p class="text-slate-500 text-sm mb-6">Designed and implemented a high-throughput API gateway for enterprise-scale traffic management.</p><button class="w-full py-3 bg-slate-800/50 text-white rounded-xl font-bold text-sm hover:bg-primary hover:text-background-dark transition-colors">View Details</button></div>
+                </div>
+                <!-- 명식당 -->
+                <div class="group bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all">
+                    <div class="h-48 bg-accent-cloud/30 relative overflow-hidden">
+                        <img src="public/fooding.png" alt="Fooding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                    </div>
+                    <div class="p-6"><h3 class="text-xl font-bold text-white mb-1">Microservices Gateway</h3><p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">Backend Lead</p><p class="text-slate-400 text-xs mb-4 font-mono">Spring Cloud, Redis, Docker</p><p class="text-slate-500 text-sm mb-6">Designed and implemented a high-throughput API gateway for enterprise-scale traffic management.</p><button class="w-full py-3 bg-slate-800/50 text-white rounded-xl font-bold text-sm hover:bg-primary hover:text-background-dark transition-colors">View Details</button></div>
+                </div>>
+            </div>
+        </section>
+        <!-- Blog & Insights Section -->
+        <section class="w-full max-w-6xl px-6 py-20 border-t border-slate-800/50" id="blog">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-2">블로그 &amp; 기록 </h2>
+                    <p class="text-slate-400"> 공부하고 경험한 내용을 잊지 않고자 기록하고 누군가에게 도움이 될 수 있도록 게시하고 있습니다. </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Blog Card 1 -->
+                <div class="flex items-start gap-6 p-8 bg-slate-900/40 border border-slate-800 rounded-3xl hover:bg-slate-900/60 transition-all group">
+                    <div class="p-4 bg-primary/10 rounded-2xl text-primary group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-4xl">cloud</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2"> 구름위키 </h3>
+                        <p class="text-slate-500 mb-6"> 학습한 내용, 트러블 슈팅에 대한 회고 등 개발자로서 경험한 점을 기록하고 있습니다. </p>
+                        <button class="flex items-center gap-2 text-primary text-sm font-bold hover:gap-3 transition-all">
+                            바로가기
+                            <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Blog Card 2 -->
+                <div class="flex items-start gap-6 p-8 bg-slate-900/40 border border-slate-800 rounded-3xl hover:bg-slate-900/60 transition-all group">
+                    <div class="p-4 bg-primary/10 rounded-2xl text-primary group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-4xl">article</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Notion 개발 위키</h3>
+                        <p class="text-slate-500 mb-6"> 새로운 것을 배우면 꼭 기록하는 습관을 들여 시간이 지나도 리마인드 할 수 있도록 합니다.</p>
+                        <button class="flex items-center gap-2 text-primary text-sm font-bold hover:gap-3 transition-all">
+                            자세히 보기
+                            <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-slate-800/50 px-6 pt-14 pb-8 lg:px-20 bg-background-dark/50">
+        <div class="max-w-6xl mx-auto">
+            <!-- Top: 3-column grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+
+                <!-- Column 1: Brand -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="p-1.5 bg-primary/10 rounded-lg">
+                            <span class="material-symbols-outlined text-primary text-xl">filter_drama</span>
+                        </div>
+                        <span class="text-lg font-bold text-white">임성제</span>
+                    </div>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        사용자와 팀원 모두의 경험을 고민하는<br/>백엔드 개발자입니다.
                     </p>
-</div>
-</footer>
-</div>
+                    <div class="flex items-center gap-1.5 text-xs text-primary/70 font-mono">
+                        <span class="relative flex h-1.5 w-1.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary"></span>
+                        </span>
+                        신입 백엔드 개발자
+                    </div>
+                </div>
+
+                <!-- Column 2: Contact -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-white font-semibold text-sm tracking-widest uppercase">Contact</h3>
+                    <ul class="flex flex-col gap-3">
+                        <li>
+                            <a href="mailto:seongje00416@gmail.com" class="flex items-center gap-3 text-slate-400 hover:text-primary transition-colors text-sm group">
+                                <span class="material-symbols-outlined text-base text-slate-600 group-hover:text-primary transition-colors">alternate_email</span>
+                                seongje00416@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center gap-3 text-slate-400 hover:text-primary transition-colors text-sm group">
+                                <svg class="w-4 h-4 text-slate-600 group-hover:text-primary transition-colors flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/>
+                                </svg>
+                                github.com/seongje00416
+                            </a>
+                        </li>
+                        <li>
+                            <span class="flex items-center gap-3 text-slate-400 text-sm">
+                                <span class="material-symbols-outlined text-base text-slate-600">location_on</span>
+                                경기도 고양시, 대한민국
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom: divider + copyright -->
+            <div class="border-t border-slate-800/60 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <p class="text-slate-600 text-xs">© 2026 임성제. All rights reserved.</p>
+                <p class="text-slate-600 text-xs font-mono">Designed &amp; Built by 임성제</p>
+            </div>
+        </div>
+    </footer>
 </div>
 </body></html>
