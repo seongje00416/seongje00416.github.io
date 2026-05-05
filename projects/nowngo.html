@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Now&Go - 프로젝트 상세</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#85957e",
+                        "on-primary-container": "#006510",
+                        "on-surface": "#e2e2e8",
+                        "inverse-on-surface": "#2f3035",
+                        "surface-container": "#1e2024",
+                        "primary": "#9eff91",
+                        "on-tertiary-fixed-variant": "#47445e",
+                        "on-secondary": "#233143",
+                        "on-error": "#690005",
+                        "tertiary-fixed": "#e5deff",
+                        "primary-fixed": "#73ff6d",
+                        "on-primary-fixed-variant": "#00530b",
+                        "on-tertiary-fixed": "#1b1830",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#003a05",
+                        "on-secondary-fixed": "#0d1c2d",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#baccb2",
+                        "on-background": "#e2e2e8",
+                        "surface": "#111318",
+                        "secondary-container": "#39485a",
+                        "on-primary-fixed": "#002202",
+                        "secondary-fixed": "#d4e4fa",
+                        "inverse-primary": "#006e12",
+                        "surface-container-high": "#282a2e",
+                        "surface-container-lowest": "#0c0e12",
+                        "on-tertiary-container": "#57536e",
+                        "on-secondary-container": "#a7b6cc",
+                        "primary-container": "#13ec37",
+                        "secondary": "#b9c8de",
+                        "on-tertiary": "#312d46",
+                        "surface-dim": "#111318",
+                        "surface-tint": "#00e632",
+                        "surface-container-low": "#1a1c20",
+                        "surface-variant": "#333539",
+                        "tertiary": "#ebe5ff",
+                        "tertiary-fixed-dim": "#c8c3e3",
+                        "inverse-surface": "#e2e2e8",
+                        "on-secondary-fixed-variant": "#39485a",
+                        "background": "#111318",
+                        "surface-bright": "#37393e",
+                        "tertiary-container": "#cec8e8",
+                        "secondary-fixed-dim": "#b9c8de",
+                        "outline-variant": "#3c4b38",
+                        "primary-fixed-dim": "#00e632",
+                        "error": "#ffb4ab",
+                        "surface-container-highest": "#333539"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0a0c10;
+            color: #e2e2e8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .neon-glow-radial {
+            background: radial-gradient(circle at 0% 0%, rgba(19, 236, 55, 0.08) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="bg-[#0a0c10]/80 backdrop-blur-xl sticky top-0 z-50">
+    <div class="max-w-[120rem] mx-auto px-10 flex justify-between items-center py-6">
+        <div class="text-2xl font-black tracking-tighter text-[#13ec37] uppercase">ALCHEMIST</div>
+        <div class="hidden md:flex items-center gap-10 font-['Inter'] tracking-tight antialiased">
+            <a class="text-slate-400 font-medium hover:text-white transition-colors hover:text-[#13ec37] hover:-translate-y-0.5 transition-all duration-200 ease-out" href="#">About</a>
+            <a class="text-slate-400 font-medium hover:text-white transition-colors hover:text-[#13ec37] hover:-translate-y-0.5 transition-all duration-200 ease-out" href="#">Skills</a>
+            <a class="text-[#13ec37] font-bold border-b-2 border-[#13ec37] pb-1 hover:-translate-y-0.5 transition-all duration-200 ease-out" href="#">Projects</a>
+            <a class="text-slate-400 font-medium hover:text-white transition-colors hover:text-[#13ec37] hover:-translate-y-0.5 transition-all duration-200 ease-out" href="#">Blog</a>
+        </div>
+        <button class="bg-primary text-on-primary px-8 py-2.5 rounded-full font-bold text-sm hover:opacity-90 transition-all duration-200 shadow-[0_0_20px_rgba(19,236,55,0.15)]">Hire Me</button>
+    </div>
+</nav>
+<main class="relative">
+    <!-- Hero Section -->
+    <section class="relative w-full h-[716px] overflow-hidden">
+        <img class="w-full h-full object-cover grayscale-[0.4] contrast-125" data-alt="Cinematic high-angle shot of professional culinary kitchen with dark mood lighting, sharp neon green accent lights reflecting on stainless steel surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6kzX2VzcIY0yDQJ93ke7oE9OsbbDfANgrLawiEh8_jymgzds7_n3QcDnTlQPCUtw_snPLASPq17zx4uTUlctd8-z25Y7XdrDYrsv3g-ZaHwf-jr39iZykh4wArt2gHu2GQ6Qvyj-6LDGAevYDViG5PfNcbWTvnvs2uvew4r-8Ujr9wb3kgzDZVTD9O81MzZG7qzHX_BjiFMrM2f_O1uJ6JjMoMF93Gt2m_0xrmeA2-z4RIjvXDAKjPrHkOXcRFOrNnnPsnliOSio"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+        <div class="absolute inset-0 neon-glow-radial"></div>
+        <div class="absolute bottom-0 left-0 w-full max-w-[120rem] mx-auto px-10 pb-20">
+            <div class="max-w-4xl">
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <span class="px-4 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-mono tracking-widest uppercase">Kubernetes</span>
+                    <span class="px-4 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-mono tracking-widest uppercase">AWS</span>
+                    <span class="px-4 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-mono tracking-widest uppercase">Spring Boot</span>
+                    <span class="px-4 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-mono tracking-widest uppercase">React</span>
+                    <span class="px-4 py-1.5 rounded-lg bg-primary/10 text-primary text-xs font-mono tracking-widest uppercase">Github Actions</span>
+                </div>
+                <h1 class="text-7xl md:text-9xl font-black tracking-tighter mb-4 text-on-surface">Now & Go</h1>
+                <p class="text-xl text-slate-400 max-w-2xl font-[89%] leading-relaxed">
+                    AI 를 사용해 개인화 된 여행 계획을 세워주고 하나의 플랫폼에서 모든 서비스에 대해 조회 및 결제가 가능한 One-Stop 서비스 플랫폼 개발
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Content Canvas -->
+    <div class="max-w-[120rem] mx-auto px-10 py-32 space-y-48">
+        <!-- About the Project -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+            <div class="md:col-span-4">
+                <h2 class="text-sm font-mono text-primary uppercase tracking-[0.3em] mb-4">01 // 개요</h2>
+                <p class="text-3xl font-bold tracking-tight text-on-surface"> 마이크로 서비스 아키텍처 </p>
+            </div>
+            <div class="md:col-span-8">
+                <p class="text-lg text-slate-400 font-[89%] leading-loose">
+                    - 서비스 확장성과 독립 배포를 위한 마이크로 서비스 구조 채택 <br>
+                    - Kubernetes를 사용한 컨테이너 관리 <br>
+                    - SQS를 사용한 데이터 정합성 보장, 분산 트랜잭션 구현 <br>
+                    - Terraform을 사용해 인프라를 구축함으로써 스테이지 별 같은 환경 구축 토대 마련
+                </p>
+            </div>
+            <div class="md:col-span-4">
+                <h2 class="text-sm font-mono text-primary uppercase tracking-[0.3em] mb-4"></h2>
+                <p class="text-3xl font-bold tracking-tight text-on-surface">RAG와 LLM을 활용한 AI 플랜 제공</p>
+            </div>
+            <div class="md:col-span-8">
+                <p class="text-lg text-slate-400 font-[89%] leading-loose">
+                    - 서비스에서 사용하고 있는 데이터 기반 AI 모델 구현을 위해 RAG 활용 <br>
+                    - 사용자에게 정해진 포맷의 데이터 전달을 위해 LLM 사용 <br>
+                </p>
+            </div>
+            <div class="md:col-span-4">
+                <h2 class="text-sm font-mono text-primary uppercase tracking-[0.3em] mb-4"></h2>
+                <p class="text-3xl font-bold tracking-tight text-on-surface">Redis를 사용한 대기열 및 분산락 적용</p>
+            </div>
+            <div class="md:col-span-8">
+                <p class="text-lg text-slate-400 font-[89%] leading-loose">
+                    - SortedSet 자료구조를 활용한 대기열 기능 구현 <br>
+                    - 예약, 결제 과정에서 발생할 수 있는 중복 예매 가능성을 방지하기 위해 분산락 적용
+                </p>
+            </div>
+            <div class="md:col-span-4">
+                <h2 class="text-sm font-mono text-primary uppercase tracking-[0.3em] mb-4"></h2>
+                <p class="text-3xl font-bold tracking-tight text-on-surface">Facade 효과를 구현하기 위한 구조</p>
+            </div>
+            <div class="md:col-span-8">
+                <p class="text-lg text-slate-400 font-[89%] leading-loose">
+                    - 네트워크 경계를 활용한 Facade 구조 효과
+                    - 데이터베이스에 접근할 수 있는 단일 책임 원칙을 준수 <br>
+                    - 동시에 인터페이스처럼 다른 서비스에서 호출해 사용
+                </p>
+            </div>
+        </section>
+        <!-- Technical Challenges & Solutions -->
+        <section class="space-y-12">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="text-sm font-mono text-primary uppercase tracking-[0.3em] mb-4">02 // 담당 기능 </h2>
+                    <h3 class="text-5xl font-black tracking-tighter text-on-surface">Technical Challenges &amp; Architectural Solutions.</h3>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="p-8 rounded-2xl bg-surface-container-low border border-outline-variant/10 hover:border-primary/30 transition-all duration-300">
+                        <h4 class="text-primary font-bold mb-2">Real-time State Sync</h4>
+                        <p class="text-slate-400 text-sm font-[89%]">Managing inventory across 14 global locations with <span class="text-on-surface">0.1ms latency</span>. Implemented a custom WebSocket hub using Elixir for high-concurrency message passing.</p>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-surface-container-low border border-outline-variant/10 hover:border-primary/30 transition-all duration-300">
+                        <h4 class="text-primary font-bold mb-2">Dynamic Theming Engine</h4>
+                        <p class="text-slate-400 text-sm font-[89%]">Developed a proprietary CSS-in-JS solution that adapts UI contrast based on ambient kitchen lighting conditions to prevent eye strain.</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-3">
+                    <div class="bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant/10 h-full">
+                        <div class="flex gap-2 mb-6">
+                            <div class="w-3 h-3 rounded-full bg-error-container"></div>
+                            <div class="w-3 h-3 rounded-full bg-secondary-container"></div>
+                            <div class="w-3 h-3 rounded-full bg-on-primary-container"></div>
+                        </div>
+                        <pre class="font-mono text-sm leading-relaxed overflow-x-auto text-on-surface-variant">
+<span class="text-primary">const</span> <span class="text-tertiary">InventoryProcessor</span> = (payload) =&gt; {
+  <span class="text-slate-500">// Global state synchronization logic</span>
+  <span class="text-primary">return</span> payload.<span class="text-secondary">map</span>(item =&gt; ({
+    ...item,
+    status: item.stock &lt; threshold ? <span class="text-primary">'CRITICAL'</span> : <span class="text-primary">'STABLE'</span>,
+    lastUpdate: <span class="text-primary">new</span> Date().<span class="text-secondary">toISOString</span>()
+  })).<span class="text-secondary">sort</span>((a, b) =&gt; b.priority - a.priority);
+};
+
+<span class="text-primary">export default</span> InventoryProcessor;
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Visual Showreel -->
+        <section class="space-y-12">
+            <div class="text-center max-w-2xl mx-auto">
+                <h2 class="text-sm font-mono text-primary uppercase tracking-[0.3em] mb-4">03 // Visuals</h2>
+                <h3 class="text-5xl font-black tracking-tighter text-on-surface">Visual Showreel</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-[800px]">
+                <div class="md:col-span-8 rounded-2xl overflow-hidden group relative">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="High-fidelity UI dashboard mockup of a restaurant inventory screen with neon green charts and dark glass panels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBflGQdJaAhwuFZq-t_B58c4hZivUXksoBsZbqDc0MZBTAv1FfJeHtQ5JCPB04le_XjSJ3T1FTxwXiCtevVh29AtZqIIC6khI_vMe5TWR3i6Ch6CKTkHIwuSGEajAZx0Dv-tC0tEecx4Dic1dmVckTaGubnycaehh1YJz2LHWVTzJDJAO7V_wgRnScz1uEBKBfRhQFPFDqfpRPBdldmx1iC8ovJtYt0ZtYo9f3nmu_XYqbNfkZ8-_7t4XtH2eLDBCKKT0oyyU9F8EQ"/>
+                    <div class="absolute inset-0 bg-surface/20 group-hover:bg-transparent transition-all"></div>
+                </div>
+                <div class="md:col-span-4 flex flex-col gap-8">
+                    <div class="h-1/2 rounded-2xl overflow-hidden group relative">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of a tablet screen showing a recipe management interface with high contrast typography and minimalist iconography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmZt53KRh1u5WosbS-9vk26xC6E74XF1AA2RlEbcFuw7a8UnLVLKt3dqtwGkCgjToGevj9ANRiGWYpD8hHZEvC8nwK6yIVKQ90_dvzlfheaxOEFnFSHhblp_6eu-g5Q_fkAk8sjmAgBPCtrKx-KPFOCxm7zrOHkMfj-vcSdnFvPJP2llsoeVEBTNR1PRuRodBpnAbM3flyVUW1A6bFjgpzmB8_sVZoG3REYi2WBpRL6X8ruRsN07x2T2p6Jqb1EUyMKhdOUWNc8ZA"/>
+                        <div class="absolute inset-0 bg-surface/20 group-hover:bg-transparent transition-all"></div>
+                    </div>
+                    <div class="h-1/2 rounded-2xl overflow-hidden group relative">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Mobile app interface showcasing food delivery tracking on a dark map with neon green path lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtDsK8Wh8MTSXTwGhYXYBgZZeEeoE_uV1IU5bKbq24y6a_zNzLMIPM5u6HR-nKEma4uyJxV1sQKjRr_9dQyLkz5qTOa3qTNzxoXudPjVuu_0iO66Pyp2dmGMNEgy8k2KY32IG-eabqi0w5FXaIby0m4VNBreDAhWpCRcKnTUkOkDnE5-T6B4u775I-A4tan8mq6SyD1O3XgJbkOoTlY3EKuz16E2OGTC0z5eWUTZcAB3s88rMJwIYAB8gd2p4awl2FS-UQb_wQ6mA"/>
+                        <div class="absolute inset-0 bg-surface/20 group-hover:bg-transparent transition-all"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Performance Metrics -->
+        <section class="space-y-12">
+            <div class="max-w-2xl">
+                <h2 class="text-sm font-mono text-primary uppercase tracking-[0.3em] mb-4">04 // Metrics</h2>
+                <h3 class="text-5xl font-black tracking-tighter text-on-surface">Optimization Data.</h3>
+            </div>
+            <div class="bg-surface-container-low rounded-3xl overflow-hidden">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                    <tr class="border-b border-outline-variant/10">
+                        <th class="px-10 py-6 text-sm font-mono text-slate-500 uppercase tracking-widest">Metric Parameter</th>
+                        <th class="px-10 py-6 text-sm font-mono text-slate-500 uppercase tracking-widest">Baseline</th>
+                        <th class="px-10 py-6 text-sm font-mono text-slate-500 uppercase tracking-widest">Optimized</th>
+                        <th class="px-10 py-6 text-sm font-mono text-slate-500 uppercase tracking-widest text-right">Gain</th>
+                    </tr>
+                    </thead>
+                    <tbody class="text-on-surface">
+                    <tr class="group hover:bg-surface-container-high transition-colors">
+                        <td class="px-10 py-8 font-medium">Response Time (TTFB)</td>
+                        <td class="px-10 py-8 text-slate-500">450ms</td>
+                        <td class="px-10 py-8 text-primary">42ms</td>
+                        <td class="px-10 py-8 text-right font-mono text-primary">+90%</td>
+                    </tr>
+                    <tr class="group hover:bg-surface-container-high transition-colors">
+                        <td class="px-10 py-8 font-medium">CPU Usage (Peak)</td>
+                        <td class="px-10 py-8 text-slate-500">82%</td>
+                        <td class="px-10 py-8 text-primary">14%</td>
+                        <td class="px-10 py-8 text-right font-mono text-primary">+68%</td>
+                    </tr>
+                    <tr class="group hover:bg-surface-container-high transition-colors">
+                        <td class="px-10 py-8 font-medium">Bundle Size (Gzipped)</td>
+                        <td class="px-10 py-8 text-slate-500">1.2MB</td>
+                        <td class="px-10 py-8 text-primary">144KB</td>
+                        <td class="px-10 py-8 text-right font-mono text-primary">+88%</td>
+                    </tr>
+                    <tr class="group hover:bg-surface-container-high transition-colors">
+                        <td class="px-10 py-8 font-medium">Memory Footprint</td>
+                        <td class="px-10 py-8 text-slate-500">240MB</td>
+                        <td class="px-10 py-8 text-primary">62MB</td>
+                        <td class="px-10 py-8 text-right font-mono text-primary">+74%</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- CTA: Explore the Code -->
+        <section class="py-24 rounded-3xl bg-surface-container-low relative overflow-hidden group">
+            <div class="absolute inset-0 neon-glow-radial opacity-50"></div>
+            <div class="relative z-10 text-center max-w-3xl mx-auto space-y-10">
+                <h3 class="text-6xl font-black tracking-tighter text-on-surface">Interested in the architecture?</h3>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <button class="bg-primary text-on-primary px-12 py-5 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 shadow-[0_10px_40px_rgba(19,236,55,0.2)]">Live Demo</button>
+                    <button class="border border-outline-variant/30 text-on-surface px-12 py-5 rounded-full font-bold text-lg hover:bg-surface-container-high transition-all duration-300 flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-xl">terminal</span>
+                        GitHub
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0a0c10] mt-24 py-16">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+            <div class="text-lg font-bold text-slate-200 mb-4">DIGITAL ALCHEMIST</div>
+            <p class="font-['Inter'] text-sm uppercase tracking-widest text-slate-500">© 2024 DIGITAL ALCHEMIST. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="flex flex-wrap gap-8 md:justify-end font-['Inter'] text-sm uppercase tracking-widest">
+            <a class="text-slate-500 hover:text-[#13ec37] transition-colors duration-300" href="#">GitHub</a>
+            <a class="text-slate-500 hover:text-[#13ec37] transition-colors duration-300" href="#">LinkedIn</a>
+            <a class="text-slate-500 hover:text-[#13ec37] transition-colors duration-300" href="#">Twitter</a>
+            <a class="text-slate-500 hover:text-[#13ec37] transition-colors duration-300" href="#">Email</a>
+        </div>
+    </div>
+</footer>
+</body></html>
